@@ -1,0 +1,59 @@
+.box{
+    box-shadow: 5px 5px 5px  gainsboro;
+}
+.btn{
+    box-shadow: 3px 3px 3px  gainsboro;
+}
+.line{
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 24px; 
+    max-height: 52px;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.page{
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    background-color: beige;
+    height: 50px;
+    width: 300px;
+    /* display: inline; */
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.page button{
+    font-size: 40px;
+    text-align: center;
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+   
+}
+.pag:hover{
+    background-color: white;
+    color: black;
+}
+
+@media  (max-width: 800px) {
+    .cards{
+         max-width: 600px;
+        /* background-color: steelblue; */
+        display: flex;
+        flex-wrap: wrap;
+          flex-direction: column;
+    }
+
+
+
+}
+
