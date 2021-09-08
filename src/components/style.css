@@ -1,16 +1,41 @@
+.input{
+    height: 60px;
+     width: 400px;
+      margin: 50px; 
+      font-Size: 20px;
+      border: 1px solid black;
+}
+.cards{
+    display: flex;
+     flex-Direction: row;
+      flex-Wrap: wrap;
+      position:absolute;
+      top:240px;
+      left:100px;
+       width: 2000px;
+}
 .box{
-    box-shadow: 5px 5px 5px  gainsboro;
+    box-shadow: 5px 5px 5px  rgb(134, 131, 131);
 }
 .btn{
-    box-shadow: 3px 3px 3px  gainsboro;
+    text-decoration: none;
+    padding: 2px;
+     border: 1px solid white;
+      margin: 10px;
+       background-Color: steelblue;
+        border-Radius: 4px; 
+        /* border: 1px solid black; */
+          color: white;
+           font-Size: 34px; 
+    /* box-shadow: 3px 3px 3px  gainsboro; */
 }
 .line{
     word-break: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    line-height: 24px; 
-    max-height: 52px;
+    line-height: 34px; 
+    max-height: 72px;
     -webkit-line-clamp: 3; 
     -webkit-box-orient: vertical;
 }
@@ -21,7 +46,7 @@
 }
 .page{
     position: absolute;
-    right: 100px;
+    right: 110px;
     top: 40px;
     background-color: beige;
     height: 50px;
@@ -31,6 +56,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .page button{
     font-size: 40px;
     text-align: center;
@@ -39,21 +65,667 @@
     border: 1px solid black;
    
 }
-.pag:hover{
+button:hover{
     background-color: white;
     color: black;
 }
-
-@media  (max-width: 800px) {
-    .cards{
-         max-width: 600px;
-        /* background-color: steelblue; */
-        display: flex;
-        flex-wrap: wrap;
-          flex-direction: column;
-    }
-
-
+.number{
+    height: 60px;
+    width: 220px;
+    border-radius:5px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: gainsboro;
+    font-size: 40px;
+    position: absolute;
+    top:8%;
+    right: 8%;
+}
+.cardinfo{
+    transition: transform .2s;
+    display: inline-block;
+    position: relative;
 
 }
+.cardhover{
+    background: linear-gradient( to bottom ,#3E4E19,#00000C,#080101,#000000,#000000 );
+    /* background: linear-gradient(0.150 turn, #3f87a6, #ebf8e1, #f69d3c); */
+    /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)) */
+    /* background-color:gainsboro; */
+      /* background-color: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,1)); */
+    /* background-color: rgb(233, 214, 108); */
+    /* background-color: linear-gradient(to right, red , yellow); */
+    /* height: 380px; */
+    color: white;
+    width: 291.5px;
+    display: none;
+    margin: 15px;
+    padding-bottom: 5px;
+    /* border-radius: 10px; */
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+}
+.cardinfo:hover .cardhover{
+    transform: scale(1.1);
+    position: relative;
+    bottom: 140px;
+    display: block;
+}
+.box:hover{
+    transform: scale(1.1);
+}
+.numberinfo{
+    color: white;
+    background-color: black;
+    height: 100px;
+    width: 320px;
+    /* border-top-left-radius: 0px;
+    border-top-right-radius: 0px; */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top:1px solid lightgreen;
+    display: flex;
 
+}
+.numinfo{
+    height: 70px;
+    width: 80px;
+    /* border:1px solid black; */
+}
+#numinfo1{
+    text-shadow: 2px  gainsboro;
+    font-Size:25px;
+    color:whitesmoke;
+    width: 180px;
+    border-bottom-left-radius: 20px;
+}
+#numinfo2{
+    border: 4px solid lightgreen;
+   position: relative;
+   left: 10px;
+   color: white;
+   bottom: 50px;
+   border-radius: 50%;
+}
+.shareimg{
+    border-radius: 50%;
+    height:70px;
+    width: 80px;
+}
+@media (max-width:1600px){
+    .cards{
+        position: absolute;
+       left: -20px;
+        
+    }
+}
+@media  (max-width: 460px) {
+    
+    .page{
+        position: relative;
+       right: -200px;
+    }
+    
+    .input{
+      
+        width: 200px;
+    }
+    .number{
+        position: relative;
+        right: -200px;
+    }
+     
+}
+@media(max-width:500px){
+    .number{
+        position: relative;
+        left:350px;
+    }
+    .page{
+        position: absolute;
+       left:350px
+    }
+}
+@media (max-width:400px){
+    .number{
+        position: absolute;
+        right: -50px;
+    }
+}
+@media(max-width:350px){
+    .cards{
+        width: 400px;
+    }
+    .input{
+        width: 60px;
+    }
+    .number{
+        position: absolute;
+        left: 380px;
+        top: 120px;
+        font-size: 22px;
+        width: 150px;
+        /* display: none; */
+    }
+
+    .page{
+        font-size: 20px;
+        width: 240px;
+        position: absolute;
+        left: 380px;
+        top: 150px;
+        /* display: none; */
+    }
+    .page button{
+        width: 80px;
+    }
+}
+ @media (max-width:1320px){
+      .cards{ 
+          /* margin-left: 10px; */
+          /* padding-left: -50px; */
+          margin-left:20px;
+          /* background-color: blue; */
+          /* width: 1200px; */
+      }
+      .box{
+          margin-left: -50px;
+      }
+      .input{
+          width: 200px;
+      }
+      .page{
+          position:relative;
+          left: 500px;
+          top: -140px;
+      }
+      .submit{
+          position: relative;
+          left: -50px;
+      }
+      .number{
+          font-size: 20px;
+          width: 150px;
+        position:relative;
+        left: 500px;
+        top: -140px;
+      }
+  }
+  @media (max-width:1196px){
+    .cards{ 
+        /* margin-left: 10px; */
+        /* padding-left: -50px; */
+        margin-left:20px;
+        /* background-color: blue; */
+        width: 1190px;
+    }
+    .box{
+        margin-left: -50px;
+    }
+    .input{
+        width: 200px;
+    }
+    .page{
+        position:relative;
+        left: 450px;
+        top: -140px;
+    }
+    .submit{
+        position: relative;
+        left: -50px;
+    }
+    .number{
+        font-size: 20px;
+        width: 150px;
+      position:relative;
+      left: 450px;
+      top: -140px;
+    }
+}
+@media (max-width:1140px){
+    .cards{ 
+        /* margin-left: 10px; */
+        /* padding-left: -50px; */
+        margin-left:20px;
+        /* background-color: blue; */
+        width: 800px;
+    }
+    .box{
+        margin-left: -50px;
+    }
+    .input{
+        width: 200px;
+    }
+    .page{
+        position:relative;
+        left: 450px;
+        top: -140px;
+    }
+    .submit{
+        position: relative;
+        left: -50px;
+    }
+    .number{
+        font-size: 20px;
+        width: 150px;
+      position:relative;
+      left: 450px;
+      top: 80px;
+    }
+}
+@media (max-width:1198px){
+    .cards{ 
+        /* margin-left: 10px; */
+        /* padding-left: -50px; */
+        margin-left:20px;
+        /* background-color: blue; */
+        width: 1100px;
+    }
+    .box{
+        margin-left: -50px;
+    }
+    .input{
+        width: 200px;
+    }
+    .page{
+        position:relative;
+        left: 350px;
+        top: -140px;
+    }
+    .submit{
+        position: relative;
+        left: -50px;
+    }
+    .number{
+        font-size: 20px;
+        width: 150px;
+      position:relative;
+      left: 350px;
+      top: 100px;
+    }
+}
+@media (max-width:1195px){
+    .cards{ 
+        /* margin-left: 10px; */
+        /* padding-left: -50px; */
+        margin-left:20px;
+        /* background-color: blue; */
+        width: 1150px;
+    }
+    .box{
+        margin-left: -50px;
+    }
+    .input{
+        width: 200px;
+    }
+    .page{
+        position:relative;
+        left:450px;
+        top: -110px;
+    }
+    .submit{
+        position: relative;
+        left: -50px;
+    }
+    .number{
+        font-size: 20px;
+        width: 150px;
+      position:relative;
+      left: 450px;
+      top: -120px;
+    }
+}
+@media (max-width:1190px){
+    .cards{ 
+        /* margin-left: 10px; */
+        /* padding-left: -50px; */
+        margin-left:20px;
+        /* background-color: blue; */
+        width: 800px;
+    }
+    .box{
+        margin-left: -50px;
+    }
+    .input{
+        width: 200px;
+    }
+    .page{
+        position:relative;
+        left: 450px;
+        top: -140px;
+    }
+    .submit{
+        position: relative;
+        left: -50px;
+    }
+    .number{
+        font-size: 20px;
+        width: 150px;
+      position:relative;
+      left: 0px;
+      top: 0px;
+    }
+}
+@media (max-width:1200px){
+    .cards{ 
+        /* margin-left: 10px; */
+        /* padding-left: -50px; */
+        margin-left:20px;
+        /* background-color: blue; */
+        width: 1150px;
+    }
+    .box{
+        margin-left: -50px;
+    }
+    .input{
+        width: 200px;
+    }
+    .page{
+        position:relative;
+        left: 450px;
+        top: -140px;
+    }
+    .submit{
+        position: relative;
+        left: -50px;
+    }
+    .number{
+        font-size: 20px;
+        width: 150px;
+      position:relative;
+      left: 450px;
+      top: -150px;
+    }
+}
+@media (max-width:1050px){
+    .cards{ 
+        /* margin-left: 10px; */
+        /* padding-left: 30px; */
+        margin-left:50px;
+        /* background-color: blue; */
+        width: 1050px;
+    }
+    .box{
+        margin-left: -100px;
+    }
+    .input{
+        width: 200px;
+    }
+    .page{
+        position:relative;
+        left: 450px;
+        top: -140px;
+    }
+    .submit{
+        position: relative;
+        left: -50px;
+    }
+    .number{
+        font-size: 20px;
+        width: 150px;
+      position:relative;
+      left: 460px;
+      top: -150px;
+    }
+}
+@media (max-width:1000px){
+    .cards{ 
+        /* margin-left: 10px; */
+        /* padding-left: 30px; */
+        margin-left:50px;
+        /* background-color: blue; */
+        width: 1000px;
+    }
+    .box{
+        margin-left: -100px;
+    }
+    .input{
+        width: 200px;
+    }
+    .page{
+        position:relative;
+        left: 450px;
+        top: -140px;
+    }
+    .submit{
+        position: relative;
+        left: -50px;
+    }
+    .number{
+        font-size: 20px;
+        width: 150px;
+      position:relative;
+      left: 450px;
+      top: -150px;
+    }
+}
+  @media (max-width:800px){
+    .cards{
+        /* padding-left: -20px; */
+          padding-left:-5px;
+          
+        width: 780px;
+    }
+    .page{
+        position: absolute;
+        right:100px;
+        top: 30px;
+    }
+    .number{
+        position: absolute;
+        right: 100px;
+    }
+    .submit{
+        position: absolute;
+        left: 0px;
+        top:150px
+    }
+    .input{
+        width: 200px;
+    }
+    .box{
+        margin-left: -100px;
+    }
+    }
+    
+   
+    @media (max-width:950px){
+
+        .page{
+            position: absolute;
+            right:-80px;
+            top: 30px;
+        }
+        .number{
+            position: absolute;
+            right: -80px;
+        }
+    }
+  @media (max-width:700px){
+      .cards{
+          width: 800px;
+
+      }
+  }
+ @media (max-width:900px){
+     .number{
+         position: absolute;
+         left: 350px;
+         top: -150px;
+     }
+ }
+ @media (max-width:950px){
+    .number{
+        position: relative;
+        left: 460px;
+        top: -80px;
+    }
+}
+@media (max-width:1800px){
+    .cards{
+        /* background-color: blue; */
+        /* margin-left: -100px; */
+        width: 1400px;
+    }
+}
+@media (max-width:1630px){
+    .cards{
+        /* background-color: blue; */
+        /* margin-left: -100px; */
+        width: 1100px;
+    }
+}
+@media (max-width:1500px){
+      .cards{
+         /* background-color: chartreuse; */
+         width: 1400px;
+      }
+}
+@media (max-width:1330px){
+    .cards{
+        /* background-color: rgb(80, 83, 255); */
+        max-width:1200px ;
+    }
+}
+@media (max-width:1080px){
+  .cards{
+      /* background-color: crimson; */
+      max-width: 800px;
+  }
+}
+@media (max-width:780px){
+  .cards{
+      margin-left: -5px;
+      /* background-color: darkgoldenrod; */
+      max-width: 800px;
+  }
+  .box{
+      width: 300px;
+  }
+}
+@media (max-width:580px){
+    .cards{
+        margin-left: 50px;
+        /* margin-left: 40px; */
+        /* background-color: darksalmon; */
+      max-width: 500px;
+    }
+    .page{
+         width: 150px;
+        position:absolute;
+        left: 280px;
+        top: 50px;
+    }
+    .page button{
+        width: 50px;
+        height: 50px;
+    }
+    .number{
+
+        position:relative;
+        left: 280px;
+        top: -50px;
+    }
+}
+@media (max-width:1780px){
+    .cards{
+        /* margin-left: 500px; */
+        /* background-color: blue; */
+        /* margin-left: -100px; */
+        width: 1600px;
+    }
+}
+@media (max-width:2000px){
+    .cards{
+        /* background-color: blue; */
+        /* margin-left: -100px; */
+        width: 1900px;
+    }
+}
+@media(max-width:360px){
+    .cards{
+        /* position: static; */
+        /* background-color: darkviolet; */
+        width: 300px;
+        margin-top: 20px;
+        margin-left: -5px;
+    }
+    
+    .input{
+        width: 100px;
+    }
+    .page{
+        top: 100px;
+        /* font-size: 10px; */
+        height: 30px;
+        width: 100px;
+        position: absolute;
+        left: 170px;
+    }
+    .page button{
+        font-size: 15px;
+        width: 34px;
+        height: 30px;
+    }
+    .number{
+        padding-top: 5px;
+        /* text-align: center; */
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        width: 100px;
+        height: 35px;
+        position: absolute;
+        left: 170px;
+        top:162px;
+    }
+
+}
+@media (max-width:411px){
+     
+      .cards{
+          /* background-color: deepskyblue; */
+          width: 380px;
+      }
+      .input{
+        width: 100px;
+    }
+    .page{
+        height: 30px;
+        width: 100px;
+        position: absolute;
+        left: 170px;
+    }
+    .page button{
+        font-size: 15px;
+        width: 34px;
+        height: 30px;
+    }
+    .number{
+        position: absolute;
+        left: 170px;
+        top: 140px;
+        font-size: 15px;
+        width: 100px;
+        height: 35px;
+    }
+
+}
+@media (max-width:540px){
+    .number{
+        font-size: 15px;
+        width: 100px;
+        height: 35px;
+    }
+    .page{
+        height: 30px;
+        width: 100px;
+        /* position: absolute; */
+        /* left: 170px; */
+    }
+    .page button{
+        font-size: 15px;
+        width: 34px;
+        height: 30px;
+    }
+}

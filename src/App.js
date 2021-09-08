@@ -13,6 +13,7 @@ function App() {
   const [originalData, changeOGData] = useState([])
   const [info, setInfo] = useState('')
   const [change, setChange] = useState(undefined)
+  const [page,setPage]=useState('')
   useEffect(() => { callapi() }, [])
 
   const callapi = async (info) => {
@@ -45,20 +46,24 @@ function App() {
 
 
   function information() {
-    let arrCopy = [...state];
+    let arrCopy = [...originalData];
     let first10 = arrCopy.map((item, index) => index < 10 && item).filter(Boolean);
     setState(first10)
+    setPage(1)
+
   }
 
   function secPage(){
-    let arrCopy = [...state];
+    let arrCopy = [...originalData];
     let first10 = arrCopy.map((item, index) => ((index > 9 && index < 20) && item)).filter(Boolean);
     setState(first10)
+    setPage(2)
   }
   function third(){
-    let arrCopy = [...state];
+    let arrCopy = [...originalData];
     let third = arrCopy.map((item, index) => index > 19 &&  item).filter(Boolean);
     setState(third)
+    setPage(3)
   }
 
   <Loader type="Circles" color="#00BFFF" height={80} width={80} />
@@ -74,15 +79,15 @@ function App() {
 
 
       <input value={info} onChange={onchange}
-        style={{ height: 50, width: 400, margin: 50, fontSize: 20 }} />
+         className="input" />
 
-      <button style={{ height: 50, width: 100, marginLeft: 50 }} onClick={() => callapi(info)}>Submit</button>
-
-
+      <button  className="submit" style={{ height: 50, width: 100, marginLeft: 50 }} onClick={() => callapi(info)}>Submit</button>
 
 
 
-      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', margin: 30, width: 2000 }} className="cards" >
+
+
+      <div  className="cards" >
         {state.length == 0 && info !== '' ? <Loader className="loader"
           type='Oval'
           color="#00BFFF"
@@ -90,18 +95,26 @@ function App() {
           width={100} /> : null}
         {console.log('Info', info)}
         {state.map((item, index) => (
-          <Card style={{ width: 400, height: 450, margin: 30, borderColor: 'black', borderWidth: 1, padding: 32, }}
+          <Card style={{ borderRadius:15,width: 322, height: 410, margin: 30, borderColor: 'black', borderWidth: 1,  backgroundColor:'lightgreen'}}
             className="box" key={index}>
-            <div style={{
+            <div className="cardinfo" style={{
               borderColor: 'black', borderWidth: 1, height: 400, width: 320, borderStyle: 'solid',
-              borderRadius: 4, backgroundColor: 'whitesmoke', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
+              borderRadius: 20, backgroundColor: 'whitesmoke', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
             }}>
-
-              <img src='https://images.unsplash.com/photo-1502301197179-65228ab57f78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=332&q=80' style={{ height: 200, width: 320 }}></img>
-              <p style={{ fontSize: 20, margin: 10, display: 'block' }} className="line" ><b style={{ fontSize: 20, color: 'black' }}>title : </b> <br />  {item.data.title}</p>
-              <p>{index}</p>
-              <button className="btn" style={{ height: 40, width: 100, margin: 10, backgroundColor: 'steelblue', borderRadius: 2, borderColor: 'black', borderWidth: 1, borderStyle: 'solid', color: 'white', fontSize: 15 }} ><a href={item.data.url}></a>click</button>
-
+                
+              <img src='https://images.unsplash.com/photo-1535242208474-9a2793260ca8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZW5lcnl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' style={{ height: 300, width: 320 }}></img>
+               <div className="numberinfo">
+                 <div className="numinfo" id="numinfo1" ><b>Author :</b> <br/> {item.data.author}</div>
+                 <div className="numinfo" id ="numinfo2">
+                   <img src="https://www.pngarea.com/pngm/87/6914112_share-png-share-button-transparent-background-hd-png.png"  className="shareimg"></img>
+                 </div>
+                 
+                </div>
+               <div className="cardhover" >
+              <p style={{ fontSize: 20, margin: 10, display: 'block',color:'white' }} className="line" ><b style={{ fontSize: 20, color: 'white' }}>title : </b> <br />  {item.data.title}</p>
+             
+              <a href={item.data.url}  className="btn"  >click</a>
+              </div>
             </div>
           </Card>
         )
@@ -114,7 +127,7 @@ function App() {
         <button onClick={()=>third()}>3</button>
       </div>
 
-
+      <p className="number" > page no : {page}</p>
     </div>
   );
 }
