@@ -1,9 +1,23 @@
 .input{
+ position: absolute;
+ left: 100px;
     height: 60px;
      width: 400px;
       margin: 50px; 
-      font-Size: 20px;
+      font-Size: 30px;
       border: 1px solid black;
+}
+.submit{
+    border: 2.5px solid black;
+    font-size: 20px;
+    color: white;
+    background-color: lightseagreen;
+    position: absolute;
+    left: 406px;
+    top:51px;
+    height: 63px;
+     width: 100px;
+      margin-Left: 50px;
 }
 .cards{
     display: flex;
@@ -15,6 +29,12 @@
        width: 2000px;
 }
 .box{
+    border-Radius:15px;
+    width: 322px;
+     height: 410px;
+      /* margin-left: 30px; */
+      border: 1px solid black;
+          background-Color:lightgreen;
     box-shadow: 5px 5px 5px  rgb(134, 131, 131);
 }
 .btn{
@@ -30,6 +50,10 @@
     /* box-shadow: 3px 3px 3px  gainsboro; */
 }
 .line{
+    /* font-Size: 20px; */
+     /* margin: 10px;  */
+     /* display: block; */
+     color:white;
     word-break: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -45,10 +69,12 @@
     left: 50%;
 }
 .page{
+    border-radius: 5px;
     position: absolute;
     right: 110px;
     top: 40px;
-    background-color: beige;
+    /* background-color: lightsteelblue; */
+    /* background-color: beige; */
     height: 50px;
     width: 300px;
     /* display: inline; */
@@ -58,6 +84,7 @@
 }
 
 .page button{
+    background-color: lightsteelblue;
     font-size: 40px;
     text-align: center;
     height: 50px;
@@ -70,18 +97,43 @@ button:hover{
     color: black;
 }
 .number{
+    /* z-index: 1; */
     height: 60px;
-    width: 220px;
+    width: 100px;
     border-radius:5px;
     text-align: center;
-    border: 1px solid black;
-    background-color: gainsboro;
-    font-size: 40px;
+    border: 1px solid lightseagreen;
+    background-color: lightsteelblue;
+    /* background-color: gainsboro; */
+    font-size: 30px;
     position: absolute;
-    top:8%;
-    right: 8%;
+    top:10%;
+    right: 14.5%;
+}
+.num{
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 40px;
+    padding-right: 50px;
+    text-align:end ;
+    display: none;
+    z-index: -1;
+    position: relative;
+    top: -40px;
+    width: 200px;
+    height: 60px;
+    background-color:whitesmoke;
+
 }
 .cardinfo{
+    border:1px solid black ;
+      height: 400px;
+       width: 320px; 
+              border-Radius: 15px;
+               background-color: whitesmoke; 
+               display: flex;
+                flex-Direction: column;
+                justify-content: space-between;
     transition: transform .2s;
     display: inline-block;
     position: relative;
@@ -89,21 +141,13 @@ button:hover{
 }
 .cardhover{
     background: linear-gradient( to bottom ,#3E4E19,#00000C,#080101,#000000,#000000 );
-    /* background: linear-gradient(0.150 turn, #3f87a6, #ebf8e1, #f69d3c); */
-    /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)) */
-    /* background-color:gainsboro; */
-      /* background-color: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,1)); */
-    /* background-color: rgb(233, 214, 108); */
-    /* background-color: linear-gradient(to right, red , yellow); */
-    /* height: 380px; */
+   
     color: white;
     width: 291.5px;
     display: none;
     margin: 15px;
     padding-bottom: 5px;
-    /* border-radius: 10px; */
-    /* border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; */
+    
 }
 .cardinfo:hover .cardhover{
     transform: scale(1.1);
@@ -121,18 +165,28 @@ button:hover{
     width: 320px;
     /* border-top-left-radius: 0px;
     border-top-right-radius: 0px; */
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     border-top:1px solid lightgreen;
     display: flex;
 
 }
 .numinfo{
+
     height: 70px;
     width: 80px;
     /* border:1px solid black; */
 }
 #numinfo1{
+    padding-left: 20px;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 34px; 
+    max-height: 72px;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
     text-shadow: 2px  gainsboro;
     font-Size:25px;
     color:whitesmoke;
@@ -163,7 +217,7 @@ button:hover{
     
     .page{
         position: relative;
-       right: -200px;
+       right: 200px;
     }
     
     .input{
@@ -173,6 +227,11 @@ button:hover{
     .number{
         position: relative;
         right: -200px;
+    }
+    .num{
+        position: absolute;
+        /* left: -200px; */
+        /* top:400px */
     }
      
 }
@@ -184,6 +243,13 @@ button:hover{
     .page{
         position: absolute;
        left:350px
+    }
+    .number{
+        position: relative;
+        top: 100px;
+        font-size: 15px;
+        /* width: 100px; */
+        height: 35px;
     }
 }
 @media (max-width:400px){
@@ -294,6 +360,8 @@ button:hover{
         margin-left: -50px;
     }
     .input{
+        position: absolute;
+        left: 0px;
         width: 200px;
     }
     .page{
@@ -454,18 +522,22 @@ button:hover{
     .page{
         position:relative;
         left: 450px;
-        top: -140px;
+        top: -10px;
     }
     .submit{
         position: relative;
-        left: -50px;
+        left: 205px;
     }
     .number{
         font-size: 20px;
         width: 150px;
       position:relative;
       left: 460px;
-      top: -150px;
+      top: 10px;
+    }
+    .num{
+        position: relative;
+        top:-25px;
     }
 }
 @media (max-width:1000px){
@@ -526,6 +598,10 @@ button:hover{
     .box{
         margin-left: -100px;
     }
+    .num{
+        position: absolute;
+        left: 50px;
+    }
     }
     
    
@@ -539,6 +615,10 @@ button:hover{
         .number{
             position: absolute;
             right: -80px;
+        }
+        .num{
+            position: relative;
+            top: -25px;
         }
     }
   @media (max-width:700px){
@@ -592,12 +672,22 @@ button:hover{
       /* background-color: crimson; */
       max-width: 800px;
   }
+  
 }
 @media (max-width:780px){
   .cards{
       margin-left: -5px;
       /* background-color: darkgoldenrod; */
       max-width: 800px;
+  }
+  .num{
+      position: absolute;
+      left: 0px;
+  }
+  .number{
+      top: 100px;
+      position: relative;
+      left: 450px;
   }
   .box{
       width: 300px;
@@ -624,7 +714,13 @@ button:hover{
 
         position:relative;
         left: 280px;
-        top: -50px;
+        top: 100px;
+        width: 60px;
+    }
+    .num{
+        height: 32px;
+        font-size: 20px;
+        width: 80px;
     }
 }
 @media (max-width:1780px){
@@ -652,6 +748,8 @@ button:hover{
     }
     
     .input{
+        position: absolute;
+        left: 0px;
         width: 100px;
     }
     .page{
@@ -675,19 +773,30 @@ button:hover{
         font-size: 15px;
         width: 100px;
         height: 35px;
-        position: absolute;
+        position: relative;
         left: 170px;
         top:162px;
     }
+  
 
 }
-@media (max-width:411px){
-     
+@media (max-width:414px){
+      .num{
+         position: relative;
+         left: 10px;
+          width: 80px;
+          height: 34px;
+          text-align: center;
+          padding: 0px;
+          font-size: 20px;
+      }
       .cards{
           /* background-color: deepskyblue; */
           width: 380px;
       }
       .input{
+          position: absolute;
+          left: 0px;
         width: 100px;
     }
     .page{
@@ -706,15 +815,17 @@ button:hover{
         left: 170px;
         top: 140px;
         font-size: 15px;
-        width: 100px;
+        width: 40px;
         height: 35px;
     }
 
 }
 @media (max-width:540px){
     .number{
+        position: relative;
+        /* top: 100px; */
         font-size: 15px;
-        width: 100px;
+        /* width: 100px; */
         height: 35px;
     }
     .page{
@@ -727,5 +838,9 @@ button:hover{
         font-size: 15px;
         width: 34px;
         height: 30px;
+    }
+    .num{
+        position: relative;
+        top: -20px;
     }
 }
